@@ -1,0 +1,33 @@
+{% extends "template.html" %}
+{% load widget_tweaks %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/s_login.css' %}">
+{% block content %}
+<div class="main">
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title" style="text-align:center;" >Upload File</h2>
+                        <form method="POST" enctype="multipart/form-data" class="register-form" id="register-form">
+
+                        	{% csrf_token %}
+                        	<div class="form-group" style="text-align:center;">
+                            	{% render_field form.subject_name type="text" placeholder="Subject Name" %}
+								<br><br>
+								{% render_field form.branch type="text" placeholder="Branch" %}
+								<br><br>
+								{% render_field form.doc type="file" name="document"%}
+								<br><br>
+								<div class="form-group form-button">
+									<button type = "submit">Upload</button>
+								</div>
+							</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+

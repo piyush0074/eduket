@@ -1,0 +1,52 @@
+		<!--<nav class="navbar_color navbar navbar-expand-lg navbar-light ">
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="/home" >Home</a>
+							</li>
+							{% if user.is_authenticated %}
+								<li class="nav-item">
+									<a class="nav-link" href="/profile" >{{user.username|title}}</a>
+								</li>
+								{% if upload %}
+									<li class="nav-item">
+										<a class="nav-link" href="/upload" >Upload</a>
+									</li>
+								{% endif %}
+							{% endif %}
+							{% if user.is_authenticated %}
+								<li class="nav-item">
+									<a class="nav-link" href="/logout" >Log Out</a>
+								</li>
+							{% else %}
+								<li class="nav-item">
+									<a class="nav-link" href="/login" >Sign In</a>
+								</li>
+							{% endif %}
+						</ul>
+				</div>
+			</nav>-->
+<div class = "topnav">
+		<div class="search-container">
+		<form action="/search/" method="GET" value="{{request.GET.q}}">
+      		<input type="text" placeholder="Search.." name="q" value="{{request.GET.q}}">
+      		<button type="submit">Submit</button>
+    	</form></div>
+    	<div class="dropdown">
+    		<!--<button class="dropbtn">Login</button>
+    		<div class="dropdown-content">
+    			<a href="login_s">Student</a>
+    			<a href="login_t">Teacher</a>
+    		</div>-->
+    	</div> 	
+ 		<a href="/home">Home</a>
+ 		{% if user.is_authenticated %}
+			<a href="/profile">{{user.username|title}}</a>
+			{% if upload %}
+			<a href="/upload">Upload</a>
+			{% endif %}
+			<a href="/logout">Log Out</a>
+		{% else %}
+			<a href="/login">Sign In</a>
+		{% endif %}
+</div>

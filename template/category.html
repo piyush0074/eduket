@@ -1,0 +1,13 @@
+{% extends "template.html" %}
+{% load widget_tweaks %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/s_login.css' %}">
+{% block content %}
+{% for file in result %}
+	<h2>{{ file.subject_name }}</h2>
+	<p>Uploaded by : {{ file.user }}</p>
+	<p><a href="{{ file.doc.url }}" download style="text-decoration: none;"> Download </a><a href="/pdf/?view={{file.doc}}" style="text-decoration: none;" target="_blank">View</a></p><br>
+{% endfor %}
+
+{% endblock %}
+

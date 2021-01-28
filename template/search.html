@@ -1,0 +1,13 @@
+{% extends "template.html" %}
+{% load widget_tweaks %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/s_login.css' %}">
+{% block content %}
+<h1>Search Resut :</h1>
+	{{ subject.subject_name }}
+	{{ subject.user }}
+	{{br.name}}
+
+
+{% endblock %}
+

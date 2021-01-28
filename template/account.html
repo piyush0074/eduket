@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+{% load widget_tweaks %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/s_login.css' %}">
+{% block content %}
+<dic class="main">
+<div class="container">
+<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	
+</form>
+</div>
+</div>
+
+<p><a href="{% url 'mfa:security_settings' %}" style="text-decoration: none;">Two Step Authentication</a></p>
+<p><a href=""style="text-decoration: none;">Change Password</a></p>
+
+{% endblock %}
+

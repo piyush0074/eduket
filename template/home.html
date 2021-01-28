@@ -1,0 +1,16 @@
+{% extends "template.html" %}
+{% load static %}
+{% block content %}
+<p>Branches</p>
+{% for list in cat %}
+	<h3><a href="/category/?q={{list.branch_name}}"  style="text-decoration: none;">{{ list.branch_name }}</a></h3>
+{% endfor %}
+<hr>
+<p></p>
+{% for file in document %}
+	<h2>{{ file.subject_name }}</h2>
+	<p>Uploaded by : {{file.designation}} {{ file.user }} {{file.college_name }}</p>
+	<p><a href="{{ file.doc.url }}" download style="text-decoration: none;"> Download </a>     <a href="/pdf/?view={{file.doc}}" style="text-decoration: none;" target="_blank">View</a></p><br>
+{% endfor %}
+{% endblock %}
+

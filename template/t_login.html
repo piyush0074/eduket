@@ -1,0 +1,16 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+
+<form method="POST">
+	{% csrf_token %}
+	{{form.as_p}}
+	<button class = "btn" type = "submit">Log in</button>
+	</form>
+<br><br>
+<p><a href="login_S">Login as a Student</a></p>
+<p><a href="login_t">Login as a Teacher</a></p>
+<p>New teacher click here for register</p>
+{% endblock %}
+

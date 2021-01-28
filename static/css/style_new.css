@@ -1,0 +1,44 @@
+body{
+	background-color: #ecfcff;
+}
+/* navbar color*/
+.navbar_color{
+	background-color: #5edfff;
+}
+.navbar{
+	padding: 1% 5% 1% 5%;
+}
+.nav-item{
+	padding: 2% 5%;
+}
+.box{
+	background-color: #fff;
+	margin: 5% 5% 5%;
+	padding: 2%;
+}
+.right-col{
+	text-align: center;
+	padding: 2%;
+}
+.signup-form-heading{
+	font-weight: 800;
+	line-height: 2;
+}
+.form-input{
+	width: 50%;
+	margin: 1%;
+	border: none;
+	border-bottom: 1px solid black;
+	padding: 2%;
+}
+.ic{
+	padding: 2%;
+}
+.signup-footer{
+	line-height: 1;
+	margin: 7% 1% 5% 0;
+}
+/* button stu_details */
+.button-stu-detail{
+	padding: 40% 10%;
+}
